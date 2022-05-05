@@ -20,18 +20,19 @@
         <div>
             <form>
                 <label for="nome">Nome:</label> <br>
-                <input type="text" id= "nome">
-                <br>
+                <input type="text" id= "nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
                 <br>
                 <label for="email">E-mail:</label> <br>
-                <input type="email" id= "email">
-                <br>
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id="txtEmail"></div>
                 <br>
                 <label for="assunto">Assunto:</label> <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="10"></textarea>
+                <textarea name="assunto" id="assunto" cols="60" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
                 <br>
                 <br>
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
 
@@ -47,7 +48,8 @@
     2sAv.%20S%C3%A3o%20Paulo%2C%201009%20-%20Parque%20Paulista%2C%20Francisco%
     20Morato%20-%20SP%2C%2007903-200!5e0!3m2!1spt-BR!2sbr!4v1651685055874!5m2!
     1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" 
-    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+    onmousemove="mapaZomm()" onmouseout="mapaNormal()" id="mapa"></iframe>
 
         </div>
 
@@ -68,6 +70,9 @@
     Todos os direitos rerservados para: Lucas Silva &copy;
    </p>
 </footer>
+
+<script src="assets/js/script.js"></script>
+
 
 </body>
 </html>
